@@ -36,13 +36,18 @@ const MenuBars = styled(FaBars)`
   @media screen and (max-width: 768px) {
     display: block;
     background-size: contain;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 40px;
+    color: #fff;
     transform: translateY(-50%, 25%);
+    
+    &:hover {
+      color: #000d1a;
+    }
   }
 `;
 
@@ -71,11 +76,11 @@ const NavBtn = styled.div`
 `;
 
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <Nav>
       <Logo to="/">ELIXR</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle}/>
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>

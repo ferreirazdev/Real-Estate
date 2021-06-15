@@ -78,7 +78,7 @@ const HeroContent = styled.div`
     font-size: clamp(1rem, 8vw, 2rem);
     font-weight: 400;
     text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
     text-align: left;
     margin-bottom: 0.8rem;
   }
@@ -159,7 +159,7 @@ const Hero = ({ slides }) => {
     if(timeout.current) {
       clearTimeout(timeout.current);
     }
-    
+
     setCurrent(current === 0 ? length - 1 : current - 1);
     
     console.log(current);
